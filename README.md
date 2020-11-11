@@ -15,3 +15,5 @@ A functioning Discord Bot with functions like
 > Common commands {
     help, ping e.t.c.
 }
+
+*NOTE: WATCHTOGETHER COMMAND STILL UNDER DEVELOPMENT*
