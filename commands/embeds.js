@@ -1,3 +1,4 @@
+//EMBEDDED MESSAGE EXAMPLE CODE
 module.exports = {
 	name: "embeds",
 	args: false,
