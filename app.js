@@ -1,10 +1,16 @@
+//THIS IS A FILE TESTING THE BOT'S CURRENCY SYSTEM - THE MAIN JS FILE FOR THE BOT IS INDEX.JS
+
+// Require the discord.js module (more info for discord.js at: discord.js.org)
 const Discord = require("discord.js");
 
+// Create a new Discord client.
 const client = new Discord.Client();
 const { Users, CurrencyShop } = require("./dbObjects");
+// Require the sequelize module (for storing data with Sequelize)
+// DON'T USE SEQUELIZE 4!!! ONLY SEQUELIZE 5 OR LATER!!
 const { Op } = require("sequelize");
 const currency = new Discord.Collection();
-const PREFIX = "//";
+const PREFIX = "//"; //change the prefix here
 
 Reflect.defineProperty(currency, "add", {
 	value: async function add(id, amount) {
@@ -26,6 +32,7 @@ Reflect.defineProperty(currency, "getBalance", {
 	},
 });
 
+// The following code will run once, right after the bot has logged in.
 client.once("ready", async () => {
 	const storedBalances = await Users.findAll();
 	storedBalances.forEach(b => currency.set(b.user_id, b));
@@ -100,4 +107,5 @@ client.on("message", async message => {
 	}
 });
 
+// Login to Discord with the bot's token (get one from the discord developer portal)
 client.login("BOT_TOKEN_HERE");
