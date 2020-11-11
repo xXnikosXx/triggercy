@@ -1,9 +1,12 @@
+// Require Sequelize
 const Sequelize = require("sequelize");
+
 
 const sequelize = new Sequelize("database", "username", "password", {
 	host: "localhost",
 	dialect: "sqlite",
 	logging: false,
+	// SQLite only
 	storage: "database.sqlite",
 });
 
@@ -13,18 +16,19 @@ sequelize.import("models/UserItems");
 
 const force = process.argv.includes("--force") || process.argv.includes("-f");
 
+// Item Shop
 sequelize.sync({ force }).then(async () => {
 	const shop = [
-		CurrencyShop.upsert({ name: "Compliment", cost: 0 }),
-		CurrencyShop.upsert({ name: "Wholesome insult", cost: 169 }),
-		CurrencyShop.upsert({ name: "Dare", cost: 450 }),
-		CurrencyShop.upsert({ name: "Truth", cost: 450 }),
-		CurrencyShop.upsert({ name: "Pardon", cost: 420420420 }),
-		CurrencyShop.upsert({ name: "Troll", cost: 690 }),
-		CurrencyShop.upsert({ name: "kneecaps", cost: 69420 }),
-		CurrencyShop.upsert({ name: "'short' ticket", cost: 69696969 }),
-		CurrencyShop.upsert({ name: "Appreciation", cost: 0 }),
-		CurrencyShop.upsert({ name: "trigger", cost: 700 }),
+		CurrencyShop.upsert({ name: "item a", cost: 0 }),
+		CurrencyShop.upsert({ name: "item b", cost: 160 }),
+		CurrencyShop.upsert({ name: "item c", cost: 450 }),
+		CurrencyShop.upsert({ name: "item d", cost: 450 }),
+		CurrencyShop.upsert({ name: "item e", cost: 480 }),
+		CurrencyShop.upsert({ name: "item f", cost: 690 }),
+		CurrencyShop.upsert({ name: "item g", cost: 100 }),
+		CurrencyShop.upsert({ name: "item h", cost: 15 }),
+		CurrencyShop.upsert({ name: "item i", cost: 0 }),
+		CurrencyShop.upsert({ name: "item j", cost: 700 }),
 	];
 	global.shop = shop;
 	await Promise.all(shop);
