@@ -1,6 +1,6 @@
 {
 	"prefix": "//",
 	"prefixAdmin": "//",
-	"token": "NzE4MjY3NDQ1MjI3MjkwNjM0.XtmYrw._bFMVroN7KkLQ6yeT4RdEfwcaek",
-	"adminRole": "738499487319720047"
+	"token": "BOT_TOKEN_HERE",
+	"adminRole": "ROLE_ID_HERE"
 }
