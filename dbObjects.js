@@ -1,9 +1,11 @@
+// Require sequelize
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize("database", "usernme", "password", {
 	host: "localhost",
 	dialect: "sqlite",
 	logging: false,
+	// SQLite only
 	storage: "database.sqlite",
 });
 
