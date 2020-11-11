@@ -100,4 +100,4 @@ client.on("message", async message => {
 	}
 });
 
-client.login("NzE4MjY3NDQ1MjI3MjkwNjM0.XtmYrw._bFMVroN7KkLQ6yeT4RdEfwcaek");
+client.login("BOT_TOKEN_HERE");
