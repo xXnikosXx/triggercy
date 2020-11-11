@@ -1,0 +1,33 @@
+{
+  "name": "trigger-cy-advanced",
+  "version": "0.2.1",
+  "description": "A more advanced, complete Discord bot, created with the sole purpose of messing with our Beloved friend Cy <3",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xXnikosXx/triggercy.git"
+  },
+  "keywords": [
+    "trigger",
+    "cy"
+  ],
+  "author": "xXnikosXx",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/xXnikosXx/triggercy/issues"
+  },
+  "homepage": "https://github.com/xXnikosXx/triggercy#readme",
+  "devDependencies": {
+    "eslint": "^7.6.0"
+  },
+  "dependencies": {
+    "5": "0.0.1",
+    "discord.js": "^12.2.0",
+    "sequelize": "^5.22.3",
+    "sequelizer": "^1.1.4",
+    "sqlite3": "^5.0.0"
+  }
+}
