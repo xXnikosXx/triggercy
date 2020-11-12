@@ -12,12 +12,12 @@ module.exports = {
 
 			//	This will check if there are any users tagged. if not, the author will be targeted.
 			if (!message.mentions.users.size) {
-				message.reply(`Y-yes, Ssenpai :pleading_face:\n*points gun at @${message.author.tag}sama*\n **__Armed and loaded, M-master__** `);
+				message.reply(`**__Armed and loaded__** `);
 				global.target = (message.author.id);
 				global.targetName = (message.author.tag);
 				target = global.target;
 				targetName = global.targetName;
-				message.reply(`N-new *QwQ* new ttarget's s-snowflake: ${target} (t-target is-s: ${targetName})`);
+				message.reply(`New target's snowflake: ${target} (target is: ${targetName})`);
 				return;
 			}
 
@@ -25,12 +25,12 @@ module.exports = {
 			// this will return a `User` object, just like `message.author`
 			const taggedUser = message.mentions.users.first();
 
-			message.reply(`Y-yes, Ssenpai :pleading_face:\n*points gun at @${taggedUser.tag}san*\n**__Armed and loaded, M-master`);
+			message.reply(`Armed and loaded`);
 			global.target = (taggedUser.id);
 			global.targetName = (taggedUser.tag);
 			target = global.target;
 			targetName = global.targetName;
-			message.reply(`N-new *QwQ* new ttarget's s-snowflake: ${target} (t-target is-s: ${targetName})`);
+			message.reply(`New target's snowflake: ${target} (target is: ${targetName})`);
 
 			console.log(`Target has changed! New target ID: ${target} New target name: ${targetName}`);
 			return;
